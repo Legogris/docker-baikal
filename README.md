@@ -20,7 +20,7 @@ Setup Baikal using [admin](http://localhost/admin).
 Create data container:
 
 ```shell
-docker run --volumes-from baikal --name baikal-data busybox
+docker run --volumes-from baikal --name baikal-data alpine:3.2
 ```
 
 Now you can safely delete baikal container:
@@ -43,7 +43,7 @@ docker run \
 
 ### Backup
 
-Create baikal-backup.tar.gz archive in current directory using temporaty container:
+Create baikal-backup.tar.gz archive in current directory using temporary container:
 
 ```shell
 docker run \
@@ -56,7 +56,7 @@ docker run \
 
 ### Restore
 
-Run DokuWiki container:
+Run baikal container:
 
 ```shell
 docker run \
@@ -70,7 +70,7 @@ docker run \
 Create data container:
 
 ```shell
-docker run --volumes-from baikal --name baikal-data busybox
+docker run --volumes-from baikal --name baikal-data alpine:3.2
 ```
 
 Stop baikal:
